@@ -32,7 +32,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
   },
   function(data) {
     $.each(data.items, function(i,item){
-      $("<li>").append($("<img>").attr("src", item.media.m).attr("width","240px")).appendTo("#listaimagenes");
+      $("<li>").append($("<img>").attr("src", item.media.m).attr("width","160px")).appendTo("#listaimagenes");
       if ( i == 7 ) return false;
     });
   }).complete(function() { init_images() });
@@ -75,23 +75,21 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 </style>
 </head>
 <home>
-<div class="row-fluid">
- <img src="static/img/aspa-logo.jpg" class="span2"/>
+<div class="row-fluid" height="60">
+ <img src="static/img/aspa-logo.jpg" class="span2" />
 </div>
 <div class="row-fluid">
 <div class="accordion" id="accordion2">
 <!-- INICIO QUE ES EL ASPA -->
 <div class="accordion-group">
   <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-      ¿Que es?
+    <a class="accordion-toggle"  href="http://www.aspa3.com" target="_blank">
+      III Cumbre ASPA 
     </a>
   </div>
-  <div style="height: auto;" id="collapseOne" class="accordion-body in collapse">
+  <div style="height: 0px;" id="" class="accordion-body collapse">
     <div class="accordion-inner"><!-- CONTENIDO -->
-      La Cumbre América del Sur-Países Árabes (ASPA) es un foro de coordinación política entre los países de estas dos regiones, así como un mecanismo de cooperación en el ámbito de la economía, la cultura, la educación, la ciencia y la tecnología, la preservación del medio ambiente, el turismo y otros temas relevantes para el desarrollo sustentable de esos países y para contribuir a la paz mundial.
-
-Esta asociación de naciones se sustenta en raíces comunes -que aún hoy se traslucen en aspectos culturales tales como el lenguaje y la gastronomía- así como en valores fundamentales y en una visión compartida del futuro de la Humanidad.
+     
     <!-- CONTENIDO -->
     </div>
   </div>
@@ -143,11 +141,72 @@ Esta asociación de naciones se sustenta en raíces comunes -que aún hoy se tra
   </div>
 </div>
 <!-- FIN CALENDARIO DE ACTIVIDADES -->
+<!-- INICIO  Información Perú -->
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle"  data-toggle="collapse" data-parent="#accordion2" href="#informacion-peru">
+       Información Perú 
+    </a>
+  </div>
+  <div style="height: 0px;" id="informacion-peru" class="accordion-body collapse">
+    <div class="accordion-inner"><!-- CONTENIDO -->
+<div class="accordion" id="accordion-info-peru">
+<!-- INICIO QUE ES EL ASPA -->
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle"  data-toggle="collapse" data-parent="#accordion-info-peru" href="#info-peru1">
+      Centro de una civilización milenaria en América del Sur
+    </a>
+  </div>
+  <div style="height: 0px;" id="info-peru1" class="accordion-body collapse">
+    <div class="accordion-inner"><!-- CONTENIDO -->
+     <p><h1>AQUI EL CONTENIDO</h1></p>
+    <!-- CONTENIDO -->
+    </div>
+  </div>
+</div>
+<!-- FIN QUE ES EL ASPA -->
+<!-- INICIO QUE ES EL ASPA -->
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle"  data-toggle="collapse" data-parent="#accordion-info-peru" href="#info-peru2">
+      Territorio de riquezas diversas por descubrir
+    </a>
+  </div>
+  <div style="height: 0px;" id="info-peru2" class="accordion-body collapse">
+    <div class="accordion-inner"><!-- CONTENIDO -->
+     <p><h1>AQUI EL CONTENIDO</h1></p>
+    <!-- CONTENIDO -->
+    </div>
+  </div>
+</div>
+<!-- FIN QUE ES EL ASPA -->
+<!-- INICIO QUE ES EL ASPA -->
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle" href="http://www.promperu.gob.pe" target="_blank">
+      Perú un país por explorar
+    </a>
+  </div>
+  <div style="height: 0px;" id="info-peru3" class="accordion-body collapse">
+    <div class="accordion-inner"><!-- CONTENIDO -->
+     
+    <!-- CONTENIDO -->
+    </div>
+  </div>
+</div>
+<!-- FIN QUE ES EL ASPA -->
+</div>
+    <!-- CONTENIDO -->
+    </div>
+  </div>
+</div>
+<!-- FIN  Información Perú -->
 <!-- INICIO UBICACION -->
 <div class="accordion-group">
   <div class="accordion-heading">
     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-      Mapa de Ubicación
+      Sedes
     </a>
   </div>
   <div id="collapseThree" class="accordion-body collapse">
@@ -159,16 +218,19 @@ Esta asociación de naciones se sustenta en raíces comunes -que aún hoy se tra
 </tr>
 </tbody>
 <tr>
-<td>Ministerio de Cultura</td><td><a class="btn btn-info" href="http://goo.gl/maps/Apq8a"><i class="icon-map-marker icon-white"></i></a></td>
+<td><a href="http://www.mcultura.gob.pe/" target="_blank">Ministerio de Cultura</a></td><td><a class="btn btn-info" target="_blank" href="http://goo.gl/maps/Apq8a"><i class="icon-map-marker icon-white"></i></a></td>
 </tr>
 <tr>
-<td>Teatro Nacional</td><td><a class="btn btn-info" href="http://goo.gl/maps/sGbRW"><i class="icon-map-marker icon-white"></i></a></td>
+<td>Gran Teatro Nacional</td><td><a class="btn btn-info" target="_blank" href="http://goo.gl/maps/sGbRW"><i class="icon-map-marker icon-white"></i></a></td>
 </tr>
 <tr>
-<td>Palacio de Gobierno</td><td><a class="btn btn-info" href="http://goo.gl/maps/4AA9u"><i class="icon-map-marker icon-white"></i></a></td>
+<td>Palacio de Gobierno</td><td><a class="btn btn-info" target="_blank" href="http://goo.gl/maps/4AA9u"><i class="icon-map-marker icon-white"></i></a></td>
 </tr>
 <tr>
-<td>Swissotel</td><td><a class="btn btn-info" href="http://goo.gl/maps/RDCws"><i class="icon-map-marker icon-white"></i></a></td>
+<td><a href="http://www.swissotel.com/hotels/lima/" target="_blank">Swissotel</a></td><td><a class="btn btn-info" href="http://goo.gl/maps/RDCws" target="_blank"><i class="icon-map-marker icon-white"></i></a></td>
+<tr>
+</tr>
+<td><a href="http://www.bnp.gob.pe/portalbnp/" target="_blank">Biblioteca Nacional</a></td><td><a class="btn btn-info" href="http://goo.gl/maps/RDCws" target="_blank"><i class="icon-map-marker icon-white"></i></a></td>
 </tr>
 </table>
 <!-- CONTENIDO -->
@@ -191,25 +253,25 @@ Esta asociación de naciones se sustenta en raíces comunes -que aún hoy se tra
 Ambassador<br />
 Director General of Economic Promotion<br />
 Phone (+511) 204 3360<br />
-dpe@rree.gob.pe<p>
+<a href="mailto:dpe@rree.gob.pe">dpe@rree.gob.pe</a><p>
 <p>
 Arturo Jarama<br />
 Minister<br />
 Director of Investments Promotion<br />
 Phone. (+511) 204 3384<br />
-ajarama@rree.gob.pe</p>
+<a href="mailto:ajarama@rree.gob.pe">ajarama@rree.gob.pe</a></p>
 <p>
 Miss Cielo Cano<br />
 Third Secretary<br />
 Direction of Investments Promotion<br />
 Phone (+511) 204 3364<br />
-ccano@rree.gob.pe</p>
+<a href="mailto:ccano@rree.gob.pe">ccano@rree.gob.pe</a></p>
 <p>
 Miss Silvana Mendoza<br />
 Third Secretary<br />
 Direction of Investments Promotion<br />
 Phone (+511) 204 3390<br />
-smendoza@rree.gob.pe</p>
+<a href="mailto:smendoza@rree.gob.pe">smendoza@rree.gob.pe</a></p>
 <p>
 Peru´s Society for Trade (COMEXPERU)<br />
 </p>
@@ -258,21 +320,6 @@ jluna@comexperu.org.pe</p>
   </div>
 </div>
 <!-- FIN FOTOS -->
-<!-- INICIO PAISES MIEMBROS -->
-<div class="accordion-group">
-  <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
-      Paises Miembros
-    </a>
-  </div>
-  <div id="collapseSix" class="accordion-body collapse">
-    <div class="accordion-inner"><!-- CONTENIDO -->
-
-<!-- CONTENIDO -->
-    </div>
-  </div>
-</div>
-<!-- FIN PAISES MIEMBROS -->
 </div>
 </div>
           
