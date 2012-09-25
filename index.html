@@ -1,77 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="ollanta humala, presidente del peru, III Cumbre ASPA , ASPA III, movíl, versión movíl" />
+  <meta name="title" content="III Cumbre ASPA" />
+  <meta name="description" content="III Cumbre ASPA " />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="static/js/jquery.js" type="text/javascript"></script>
   <script src="static/js/bootstrap.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="static/js/mootools-core-1.3-full-compat-yc.js"></script>
-<script type="text/javascript" src="static/js/slideGallery.js"></script>
   <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<script>
-//window.addEvent("domready", function() {
-function init_images() {
-var gallery2 = new slideGallery($$(".gallery2"), {
-				steps: 1,
-				mode: "circle",
-				autoplay: true,
-				stop: ".stop",
-				start: ".start",
-				duration: 2000,
-				speed: 700
-});}
-//});
-</script>
-<script>
-$(document).ready(function(){
-$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-  {
-    tags: "mount rainier",
-    tagmode: "any",
-    format: "json"
-  },
-  function(data) {
-    $.each(data.items, function(i,item){
-      $("<li>").append($("<img>").attr("src", item.media.m).attr("width","160px")).appendTo("#listaimagenes");
-      if ( i == 7 ) return false;
-    });
-  }).complete(function() { init_images() });
-
-});
-//init_images();
-</script>
 
 <style>
-.gallery {
-    margin: 0px 0px 20px;
-    width: 964px;
-    position: relative;
-    overflow: hidden;
-}
 
-.gallery .holder {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.gallery .holder ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none outside none;
-    width: 30000px;
-}
-.gallery .holder ul li {
-    float: left;
-    width: 240px;
-    padding: 0px 5px 1px 0px;
-}
-.prev {
-    /*background: url("../images/btn-prev.png") no-repeat scroll 0% 0% transparent;*/
-    right: auto;
-    left: 10px;
-}
 table tr td {
 text-align: justify;
 }
@@ -351,21 +291,6 @@ El idioma oficial es el español expresado por el  84% de la población. Sin emb
   </div>
 </div>
 <!-- FIN QUE ES EL ASPA -->
-<!-- INICIO QUE ES EL ASPA 
-<div class="accordion-group">
-  <div class="accordion-heading">
-    <a class="accordion-toggle"  data-toggle="collapse" data-parent="#accordion-info-peru" href="#info-peru2">
-      Territorio de riquezas diversas por descubrir
-    </a>
-  </div>
-  <div style="height: 0px;" id="info-peru2" class="accordion-body collapse">
-    <div class="accordion-inner">
-     <p></p> 
-  
-    </div>
-  </div>
-</div>
-FIN QUE ES EL ASPA -->
 <!-- INICIO QUE ES EL ASPA -->
 <div class="accordion-group">
   <div class="accordion-heading">
@@ -486,33 +411,7 @@ Prensa y Comunicaciones<br />
   </div>
 </div>
 <!-- FIN CONTACTO -->
-<!-- INICIO FOTOS 
-<div class="accordion-group">
-  <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-      Fotos
-    </a>
-  </div>
-  <div id="collapseFive" class="accordion-body collapse">
-    <div class="accordion-inner">--><!-- CONTENIDO 
-<div class="gallery gallery2">
-<div class="holder">
-<ul style="margin-left: 0px;" id="listaimagenes">
-</ul>
-</div>
-<div class="control">
-	<a href="#" class="prev">prev</a>
-	<a href="#" class="next">next</a>
-	<a href="#" class="start">play</a>
-	<a href="#" class="stop">stop</a>
-</div>
-</div>-->
-		
-<!-- CONTENIDO 
-    </div>
-  </div>
-</div>-->
-<!-- FIN FOTOS -->
+
 </div>
 </div>
 <div class="row-fluid">
