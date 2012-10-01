@@ -4,13 +4,13 @@ function callback(data){
         var contenido = '';
 //	noticias.css('background-color','green');
         $.each(data, function(key,value){
-		contenido = contenido + noticia(key,value['titular'],value['texto']);
+		contenido = contenido + noticia(key,value['titular'],value['texto'],value['link']);
 	});
         noticias.html(contenido);
 }
 
-function noticia(num,titulo, texto){
-var nota= "<div class='accordion-group'> <div class='accordion-heading'> <a class='accordion-toggle'  data-toggle='collapse' data-parent='#noticias-aspa' href='#noticia"+num+"'>"+ titulo +" </a> </div>  <div style='height: 0px;' id='noticia"+num+"' class='accordion-body collapse'>  <div class='accordion-inner'>"+texto+"</div></div></div>";
+function noticia(num,titulo, texto, link){
+var nota= "<div class='accordion-group'> <div class='accordion-heading'> <a class='accordion-toggle'  data-toggle='collapse' data-parent='#noticias-aspa' href='#noticia"+num+"'>"+ titulo +" </a> </div>  <div style='height: 0px;' id='noticia"+num+"' class='accordion-body collapse'>  <div class='accordion-inner'><div class='texto'>"+texto+"</div><br /><a class='btn btn-inverse enlace' href='"+link+"' target='_blank'>Leer Noticia completa</a></div></div></div>";
 return nota;
 }
 
