@@ -6,8 +6,7 @@ function callback(data){
         $.each(data, function(key,value){
 		contenido = contenido + noticia(key,value['titular'],value['texto'],value['link']);
 	});
-        var link="jsonp('http://50.116.43.119:8070/andina/noticias/json/');"
-        noticias.html("<a class='btn btn-inverse enlace' onclick=\""+link+"\" target='_blank'>Ver ultimas noticias de Andina</a><br /><br /><div class='accordion' id='noticias-andina'>"+contenido+"</div>");
+        noticias.html("<div class='accordion' id='noticias-andina'>"+contenido+"</div>");
 }
 
 function noticia(num,titulo, texto, link){
@@ -22,7 +21,7 @@ function jsonp(url){
     script.src = url;  
     head.appendChild(script);  
     $('#andina').html("");
-    $('#andina').html("<img src='static/img/ajax-loader.gif' alt='Cargando noticias'>");
+    $('#andina').html("<img src='static/img/ajax-loader.gif' title='Cargando noticias'><div class='texto'>Cargando</div>");
 } 
 /*
 $.each(data, function(key,value){                
