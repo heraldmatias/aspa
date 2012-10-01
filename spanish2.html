@@ -32,7 +32,7 @@ color:#ffffff;font-size: 11px;
 </style>
 <script>
 $(document).ready(function() {
-jsonp("http://50.116.43.119:8070/andina/noticias/json/");
+//jsonp("http://50.116.43.119:8070/andina/noticias/json/");
 });
 </script>
 <title>III Cumbre ASPA</title>
@@ -72,15 +72,26 @@ El ASPA está conformado conformado por los 22 países miembros de la Liga de Es
     <div class="accordion-inner"><!-- CONTENIDO -->
 <div class="accordion" id="accordion-info-peru">
 <!-- INICIO QUE ES EL ASPA -->
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle" href="http://www.andina.com.pe/espanol/aspa2012/index.aspx" target="_blank">
+	Agencia Peruana de Noticias 
+    </a>
+  </div>  
+</div>
+<!-- FIN QUE ES EL ASPA -->
+<!-- INICIO QUE ES EL ASPA -->
 
 <div class="accordion-group">
   <div class="accordion-heading">
     <a class="accordion-toggle" data-toggle="collapse" data-parent="#noticias-aspa3" href="#noticias-aspa">
-	Agencia Peruana de Noticias 
+	Ultimas Noticias
     </a>
   </div>
   <div style="height: 0px;" id="noticias-aspa" class="accordion-body collapse">
     <div class="accordion-inner" id="andina"><!-- CONTENIDO -->  
+	<a class="btn btn-inverse enlace" onclick="jsonp('http://50.116.43.119:8070/andina/noticias/json/');" target="_blank">Ver ultimas noticias de Andina</a><br />
+<strong class="titular">Esta operación puede tomar algunos segundos.</strong> 
     <!-- CONTENIDO -->
     </div>
   </div>
